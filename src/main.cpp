@@ -1,7 +1,18 @@
-#include <iostream>
+#include    <iostream>
+
+#include    "inc/excessao.h"
 
 int main(void)
 {
-    std::cout << "Olá mundo!" << std::endl;
+
+    try
+    {
+        throw Excessao("meu teste");
+    }
+    catch(Excessao& ex)
+    {
+        std::cout << "Opa!!! Ocorreu algum erro" << std::endl;
+        return -1;
+    }
     return 0;
 }
