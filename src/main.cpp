@@ -11,7 +11,8 @@ int main(void)
     }
     catch(Excessao& ex)
     {
-        std::cout << "Opa!!! Ocorreu algum erro" << std::endl;
+        std::cout << "Opa!!! Ocorreu algum erro" << std::endl\
+        << ex.what() << std::endl;
         return -1;
     }
     return 0;
